@@ -1,8 +1,10 @@
 {
+  "homepage": "https://damikun.github.io/wildlife-q1-2022",
   "name": "wildlife-kundrat-q1-2022",
   "author": "Dalibor Kundrat",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
+  "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
