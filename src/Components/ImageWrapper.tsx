@@ -86,9 +86,9 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
                             onLoad={handleOnImageReady}
                             hide={!animate}
                             cache={imgCacheCtx?.cache}
-                            drag
-                            dragElastic
-                            dragConstraints={dragRange}
+                            // drag
+                            // dragElastic
+                            // dragConstraints={dragRange}
                             animate={isOnScreenMemorised}
                             variants={variantsImage}
                             transition={transitionImage}
