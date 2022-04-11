@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import  { Suspense, useContext, useEffect} from 'react';
 import './App.css';
+import ImageWrapper from './Components/ImageWrapper';
+import  LandingInfo  from './Components/LadingInfo';
+import Providers, { imageCacheCtx } from './Components/Providers';
+import { loadImages } from './Components/SuspenseImage';
+import { GetDriveUri, Images } from './Constants';
 
 function App() {
+
+  useEffect(() => {
+    document.oncontextmenu = () => false;
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Providers>
+      <Suspense fallback={<LandingInfo />}>
+        <Container>
+          <LandingInfo/>
+        </Container>
+      </Suspense>
+    </Providers>
   );
+}
+
+type ContainerProps = {
+  children: React.ReactNode;
+}
+
+function Container({children}:ContainerProps){
+
+  // const imgCacheCtx = useContext(imageCacheCtx);
+  
+  // // Prefetch
+  // loadImages(Images.map((img)=>GetDriveUri(img)).slice(0,2),imgCacheCtx?.cache);
+
+  // if(!imgCacheCtx || imgCacheCtx?.cache?.size < 2){
+  //   return null;
+  // }
+
+  console.log(Images)
+  
+  return (
+    <div className="snap-y bg-black snap-mandatory overflow-y-scroll h-screen first:pt-4 pt-10 pb-10 px-4 md:px-6 lg:px-10 xl:px-12 scrollbarhide scrollbarhide2">
+      {children}
+
+      {
+        Images.map((src,index)=>{
+          return <ImageWrapper key={index} src={GetDriveUri(src)} />
+        })
+      }
+    </div>
+  )
 }
 
 export default App;
