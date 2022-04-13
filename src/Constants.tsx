@@ -1,8 +1,74 @@
 
 export function GetDriveUri(id:string){
-    return `https://drive.google.com/uc?export=download&id=${id}`
+    return `https://www.dropbox.com/s/${id}?dl=1`
 }
 
+/*
+export function GetDriveUri(id:string){
+    return `https://drive.google.com/uc?export=download&id=${id}`
+}
+*/
+
+export const Images = [
+"1qi3vdixxzufpzo/01_wildlife_kundrat.webp",
+"pwg82ykehv8s8bq/02_wildlife_kundrat.webp",
+"4ixfulmxjhn4rht/03_wildlife_kundrat.webp",
+"fpuga8nwsp2p8dc/04_wildlife_kundrat.webp",
+"7nbv48y5s5smhem/05_wildlife_kundrat.webp",
+"4rlz008x0p7eixo/06_wildlife_kundrat.webp",
+"umlk8hd9yl0tdga/07_wildlife_kundrat.webp",
+"32bqazy9z5h3b0p/08_wildlife_kundrat.webp",
+"flccaeu65g7j2y7/27_wildlife_kundrat.webp",
+"f7nuv5nx1z85lcu/26_wildlife_kundrat.webp",
+"gl22t9k2phwakp0/34_wildlife_kundrat.webp",
+"f6mp9q6xpfux8nt/35_wildlife_kundrat.webp",
+"iafpdjoj3wtz0pc/38_wildlife_kundrat.webp",
+"bpp9s2hj0f01f8m/36_wildlife_kundrat.webp",
+"34q4f33mv4629bo/42_wildlife_kundrat.webp",
+"3znxft5d9b3ba9s/45_wildlife_kundrat.webp",
+"xao7db0r60law2f/46_wildlife_kundrat.webp",
+"zg7vle7irsjn9bg/22_wildlife_kundrat.webp",
+"hami8au50n3swfd/16_wildlife_kundrat.webp",
+"wzejkg8u1qoiuom/51_wildlife_kundrat.webp",
+"twtf4z7gpm315h1/24_wildlife_kundrat.webp",
+"sglqdjjm26unf84/29_wildlife_kundrat.webp",
+"4ixfulmxjhn4rht/03_wildlife_kundrat.webp",
+"1qi3vdixxzufpzo/01_wildlife_kundrat.webp",
+"fpuga8nwsp2p8dc/04_wildlife_kundrat.webp",
+"7nbv48y5s5smhem/05_wildlife_kundrat.webp",
+"4rlz008x0p7eixo/06_wildlife_kundrat.webp",
+"32bqazy9z5h3b0p/08_wildlife_kundrat.webp",
+"woeudy1wwcereds/09_wildlife_kundrat.webp",
+"lmcc5q36s9ibvys/10_wildlife_kundrat.webp",
+"qu3ahra5ft6n1ph/11_wildlife_kundrat.webp",
+"zpehze139vlj14x/13_wildlife_kundrat.webp",
+"1auz5v11ytcds0j/14_wildlife_kundrat.webp",
+"jttdhdgqyddfh3r/15_wildlife_kundrat.webp",
+"vognv8698mjwyvf/12_wildlife_kundrat.webp",
+"pwg82ykehv8s8bq/02_wildlife_kundrat.webp",
+"qiuy0squ0unmu5l/25_wildlife_kundrat.webp",
+"w5tg4auik5hckc2/17_wildlife_kundrat.webp",
+"0gn5ncso5q69hok/18_wildlife_kundrat.webp",
+"1rqfyhg4y8j2lgj/19_wildlife_kundrat.webp",
+"e0ktwryh2c9wgcj/20_wildlife_kundrat.webp",
+"3iftv3hdtwy3y2g/21_wildlife_kundrat.webp",
+"cbk7aka18tlnb54/28_wildlife_kundrat.webp",
+"7nwa5zxl9wren3u/49_wildlife_kundrat.webp",
+"eqz5qhc3zgwjwak/50_wildlife_kundrat.webp",
+"r639wamfvczhm6l/30_wildlife_kundrat.webp",
+"awlg7hgc0al0fax/31_wildlife_kundrat.webp",
+"h3cwtlujmroarww/32_wildlife_kundrat.webp",
+"jaqcy463p1quvz2/33_wildlife_kundrat.webp",
+"63ojpo8dj71ppr8/37_wildlife_kundrat.webp",
+"7k0zhw1l76jqr2e/39_wildlife_kundrat.webp",
+"q2pnstxj7hpi6dt/41_wildlife_kundrat.webp",
+"p18rnywxo3ggwzg/43_wildlife_kundrat.webp",
+"2lpa6e3a5dx78lq/44_wildlife_kundrat.webp",
+"5snfdyl46us77vp/47_wildlife_kundrat.webp",
+"9cpi4jqm49l7z5z/48_wildlife_kundrat.webp"
+]
+
+/*
 export const Images = [
     "1wI4s2VOKYgVOzWPiy2Zmp3_uzL9wn1cT",
     "1m_My4r3egzpX964alY9YFrnnZ6yLsxp1",
@@ -56,3 +122,5 @@ export const Images = [
     "1XmInD5819NHb6X0ucIJJ3PPtR2D1YN_n",
     "1A1TpJKU8SSpfAXPgIShO7c5yu-5ptkb2",
 ]
+*/
+
