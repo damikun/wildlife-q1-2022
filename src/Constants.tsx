@@ -1,6 +1,6 @@
 
 export function GetDriveUri(id:string){
-    return `https://www.dropbox.com/s/${id}?dl=1`
+    return `https://www.dropbox.com/s/${id}?raw=1`
 }
 
 /*
