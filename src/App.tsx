@@ -15,11 +15,11 @@ function App() {
 
   return (
     <Providers>
-      <Suspense fallback={<LandingInfo />}>
+      {/* <Suspense fallback={<LandingInfo />}> */}
         <Container>
           <LandingInfo/>
         </Container>
-      </Suspense>
+      {/* </Suspense> */}
     </Providers>
   );
 }
