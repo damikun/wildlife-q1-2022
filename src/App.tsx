@@ -44,13 +44,16 @@ function Container({children}:ContainerProps){
 
   useEffect(() => {
 
-    if(ref && !focused){
-      ref?.current?.focus();
+    if(ref !== null && !focused){
+
+      setTimeout(function() {
+        ref?.current?.focus();
+      }, 1000);
+
       setFocused(true);
     }
 
   }, [ref,focused])
-  
   
   return (
     <div ref={ref} className="snap-y bg-black snap-mandatory overflow-y-scroll h-screen first:pt-4 pt-10 pb-10 px-4 md:px-6 lg:px-10 xl:px-12 scrollbarhide scrollbarhide2">
