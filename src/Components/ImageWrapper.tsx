@@ -27,7 +27,7 @@ const transitionWrapper = {duration:0.3, ease:"easeInOut"}
 
 const transitionImage = {duration:8, delay:0, ease:"circOut"}
 
-const dragRange = {top:-10,left:-10,right:10, bottom:10} 
+// const dragRange = {top:-10,left:-10,right:10, bottom:10} 
   
 export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
   
@@ -83,7 +83,7 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 1 }}
-                      transition={{duration:2.5}}>
+                      transition={{duration:1.3}}>
                         <SuspenseImg
                             onLoad={handleOnImageReady}
                             hide={!animate}
