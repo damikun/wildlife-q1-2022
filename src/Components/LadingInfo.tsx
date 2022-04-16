@@ -52,7 +52,9 @@ function LandingInfo({loadingState = false}:LandingInfoProps){
             variants={variantsWrapper}
             transition={transitionWrapper}
             className={clsx("h-screen bg-black relative snap-start justify-center",
-            "align-middle content-center flex overflow-hidden select-none")}>
+            "align-middle content-center flex overflow-hidden select-none",
+            "border-0 focus:border-0 outline-none focus:outline-none",
+            "focus-within:outline-none")}>
         
             <motion.div
                 initial={initialScale}

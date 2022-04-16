@@ -41,18 +41,28 @@ function Container({children}:ContainerProps){
 
   const ref = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+
+    if(ref!= null){
+      ref?.current?.focus();
+    }
+  }, [ref])
+  
   return (
-    <div ref={ref} className={clsx(
+    <div tabIndex={0} ref={ref} className={clsx(
       "snap-y bg-black snap-mandatory overflow-y-scroll h-screen",
       "first:pt-4 pt-10 pb-10 px-4 md:px-6 lg:px-10 xl:px-12",
-      "scrollbarhide scrollbarhide2 relative pointer-events-auto")}>
+      "scrollbarhide scrollbarhide2 relative pointer-events-auto",
+      "border-0 focus:border-0 outline-none focus:outline-none",
+      "focus-within:outline-none")}>
       {children}
 
       {
         Images.map((src,index)=>{
-          return <ImageWrapper key={index} src={GetDriveUri(src)} />
+          return <ImageWrapper tabnum={index+1} key={index} src={GetDriveUri(src)} />
         })
       }
+
     </div>
   )
 }

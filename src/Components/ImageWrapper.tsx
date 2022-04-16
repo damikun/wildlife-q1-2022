@@ -7,6 +7,7 @@ import { SuspenseImg } from "./SuspenseImage";
 import { useOnScreen } from "./useOnScreen";
 
 type ImageWrapperProps = {
+    tabnum:number;
     src:string;
     alt?:string | undefined,
     id?:string
@@ -29,7 +30,7 @@ const transitionImage = {duration:8, delay:0, ease:"circOut"}
 
 // const dragRange = {top:-10,left:-10,right:10, bottom:10} 
   
-export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
+export default function ImageWrapper({src,alt,id,blur,tabnum}:ImageWrapperProps){
   
     const ref = useRef(null);
 
@@ -68,6 +69,7 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
     return (
       <div  id={id} 
             ref={ref} 
+            tabIndex={tabnum}
             className='w-full h-full snap-center overflow-hidden p-4 border-black select-none'>    
         <motion.div
           // whileDrag={{opacity:0}}
