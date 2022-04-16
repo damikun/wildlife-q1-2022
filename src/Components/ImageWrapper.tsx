@@ -83,7 +83,7 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 1 }}
-                      transition={{duration:1.3}}>
+                      transition={{duration:1}}>
                         <SuspenseImg
                             onLoad={handleOnImageReady}
                             hide={!animate}
