@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { useMemo, useRef } from "react";
@@ -50,7 +51,8 @@ function LandingInfo({loadingState = false}:LandingInfoProps){
             animate={isOnScreenMemorised}
             variants={variantsWrapper}
             transition={transitionWrapper}
-            className='h-screen bg-black relative snap-start justify-center align-middle content-center flex overflow-hidden select-none'>
+            className={clsx("h-screen bg-black relative snap-start justify-center",
+            "align-middle content-center flex overflow-hidden select-none")}>
         
             <motion.div
                 initial={initialScale}
@@ -59,7 +61,8 @@ function LandingInfo({loadingState = false}:LandingInfoProps){
                 transition={transitionText}
                 className='flex flex-col my-auto text-right'>
                     
-                <h1 className=' text text-7xl md:text-9xl text-white font-bold font-mono drop-shadow-lg shadow-white opacity-90'>
+                <h1 className={clsx("text text-7xl md:text-9xl text-white",
+                "font-bold font-mono drop-shadow-lg shadow-white opacity-90")}>
                 Q1 2022
                 </h1>
         
@@ -67,7 +70,8 @@ function LandingInfo({loadingState = false}:LandingInfoProps){
                     <Progress progress={fakeLoading} />
                 </div> */}
 
-                <h2 className='text-white text text-lg md:text-xl font-mono opacity-50 uppercase'>
+                <h2 className={clsx("text-white text text-lg md:text-xl",
+                "font-mono opacity-50 uppercase")}>
                 © Dalibor Kundrat
                 </h2>
 

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import  { RefObject, Suspense, useContext, useEffect, useRef, useState} from 'react';
 import './App.css';
 import ImageWrapper from './Components/ImageWrapper';
@@ -56,7 +57,10 @@ function Container({children}:ContainerProps){
   }, [ref,focused])
   
   return (
-    <div ref={ref} className="snap-y bg-black snap-mandatory overflow-y-scroll h-screen first:pt-4 pt-10 pb-10 px-4 md:px-6 lg:px-10 xl:px-12 scrollbarhide scrollbarhide2">
+    <div ref={ref} className={clsx(
+      "snap-y bg-black snap-mandatory overflow-y-scroll h-screen",
+      "first:pt-4 pt-10 pb-10 px-4 md:px-6 lg:px-10 xl:px-12",
+      "scrollbarhide scrollbarhide2")}>
       {children}
 
       {

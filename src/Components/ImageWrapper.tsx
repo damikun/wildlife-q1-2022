@@ -66,7 +66,9 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
     )
     
     return (
-      <div id={id} ref={ref} className='w-full h-full snap-center overflow-hidden p-4 border-black select-none'>    
+      <div  id={id} 
+            ref={ref} 
+            className='w-full h-full snap-center overflow-hidden p-4 border-black select-none'>    
         <motion.div
           // whileDrag={{opacity:0}}
           animate={isOnScreenMemorised}
