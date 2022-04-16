@@ -76,10 +76,10 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
           transition={transitionWrapper}
           exit={{opacity:0}}
           className='rounded-lg overflow-hidden w-full h-full'>
+         <Suspense fallback={<Spinner/>}>
             <AnimatePresence>
-              {
-                render && <Suspense fallback={<Spinner/>}>
-                    <motion.div
+                {
+                  render &&  <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 1 }}
@@ -98,9 +98,9 @@ export default function ImageWrapper({src,alt,id,blur}:ImageWrapperProps){
                             alt={alt}
                             src={src}/> 
                     </motion.div>
-                  </Suspense>   
-              }
-            </AnimatePresence>
+                  }
+                </AnimatePresence>
+            </Suspense>   
         </motion.div>
       </div>
     )
