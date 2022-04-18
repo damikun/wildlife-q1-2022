@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/wildlife-q1-2022/static/css/main.30199824.css",
-    "main.js": "/wildlife-q1-2022/static/js/main.8268c339.js",
+    "main.js": "/wildlife-q1-2022/static/js/main.c341926e.js",
     "static/js/787.707ef09b.chunk.js": "/wildlife-q1-2022/static/js/787.707ef09b.chunk.js",
     "index.html": "/wildlife-q1-2022/index.html",
     "main.30199824.css.map": "/wildlife-q1-2022/static/css/main.30199824.css.map",
-    "main.8268c339.js.map": "/wildlife-q1-2022/static/js/main.8268c339.js.map",
+    "main.c341926e.js.map": "/wildlife-q1-2022/static/js/main.c341926e.js.map",
     "787.707ef09b.chunk.js.map": "/wildlife-q1-2022/static/js/787.707ef09b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.30199824.css",
-    "static/js/main.8268c339.js"
+    "static/js/main.c341926e.js"
   ]
 }
