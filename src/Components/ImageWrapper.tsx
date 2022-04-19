@@ -1,3 +1,5 @@
+import React from "react";
+import clsx from "clsx";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Suspense, useCallback, useContext, useEffect, useState } from "react";
 import { useMemo, useRef } from "react";
@@ -7,6 +9,7 @@ import { SuspenseImg } from "./SuspenseImage";
 import { useOnScreen } from "./useOnScreen";
 
 type ImageWrapperProps = {
+    onScreen?: (state:boolean,id:string) => void
     tabnum:number;
     src:string;
     alt?:string | undefined,
@@ -29,8 +32,10 @@ const transitionWrapper = {duration:0.3, ease:"easeInOut"}
 const transitionImage = {duration:8, delay:0, ease:"circOut"}
 
 // const dragRange = {top:-10,left:-10,right:10, bottom:10} 
-  
-export default function ImageWrapper({src,alt,id,blur,tabnum}:ImageWrapperProps){
+
+export default React.memo(ImageWrapper)
+
+function ImageWrapper({src,alt,id,blur,tabnum,onScreen}:ImageWrapperProps){
   
     const ref = useRef(null);
 
@@ -59,6 +64,20 @@ export default function ImageWrapper({src,alt,id,blur,tabnum}:ImageWrapperProps)
 
     const [animate,setAnimate] = useState(false);
 
+    const memorised = useCallback(
+      (state: boolean, id: string) => {
+        onScreen && onScreen(state,id)
+      },
+      [onScreen],
+    )
+    
+    useEffect(() => {
+      if(id && isOnScreen && animate){
+        memorised(isOnScreen,id);
+      }
+
+    }, [isOnScreen, memorised,id,animate])
+
     const handleOnImageReady = useCallback(
       () => {
         setAnimate(true)
@@ -70,9 +89,9 @@ export default function ImageWrapper({src,alt,id,blur,tabnum}:ImageWrapperProps)
       <div  id={id} 
             ref={ref} 
             tabIndex={tabnum}
-            className='w-full h-full snap-center overflow-hidden p-4 border-black select-none'>    
+            className={clsx("w-full h-full snap-center snap-always",
+            "overflow-hidden p-4 border-black select-none")}>    
         <motion.div
-          // whileDrag={{opacity:0}}
           animate={isOnScreenMemorised}
           variants={variantsWrapper}
           transition={transitionWrapper}

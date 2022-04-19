@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { stat } from "fs";
+import React, { useEffect, useState } from "react";
 
 // A Resource is an object with a read method returning the payload
 interface Resource<Payload> {
@@ -121,12 +122,18 @@ export function SuspenseImg({ onLoad,hide, ...rest }: SuspenseImgProps): JSX.Ele
 
   const [state,setState] = useState(false);
 
+  useEffect(() => {
+    if(state){
+      onLoad && onLoad();
+    }
+  
+  }, [state,onLoad])
+
   if (rest.src) {
     loadImage(rest.src,rest.cache).read();
 
     if(!state) {
       setState(true);
-      onLoad && onLoad();
     }
 
   } else {
