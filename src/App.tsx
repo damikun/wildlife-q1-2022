@@ -58,7 +58,7 @@ function Container({children}:ContainerProps){
     
     if(current !== null && current !== undefined && current !== ""){
       const handler = function(){
-        // Handle autoscrole...
+        // Handle autoscroll...
       } 
       
       var timeout = setTimeout(handler,10000);  

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { stat } from "fs";
 import React, { useEffect, useState } from "react";
 
 // A Resource is an object with a read method returning the payload

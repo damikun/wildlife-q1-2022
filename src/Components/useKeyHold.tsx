@@ -5,12 +5,12 @@ export function useKeyDownHold(ref:React.RefObject<Element>): boolean {
     const [keyHold, setKeyHold] = useState(false);
   
     function downHandler({key}:any) {
-      if(key === "ArrowDown")
+      if(key === "ArrowDown" || key === "ArrowUp")
         ref && setKeyHold(true);
     }
   
     function upHandler({key}:any) {
-      if(key === "ArrowDown")
+      if(key === "ArrowDown" || key === "ArrowUp")
         setKeyHold(false);
     }
   

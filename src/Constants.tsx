@@ -9,7 +9,8 @@ export function GetDriveUri(id:string){
 }
 */
 
-export const Images = [
+export const Images = [    
+    
 "flccaeu65g7j2y7/27_wildlife_kundrat.webp",
 "f7nuv5nx1z85lcu/26_wildlife_kundrat.webp",
 "gl22t9k2phwakp0/34_wildlife_kundrat.webp",
@@ -62,6 +63,10 @@ export const Images = [
 "2ldcj4b9vazugly/54_wildlife_kundrat.webp",
 "5snfdyl46us77vp/47_wildlife_kundrat.webp",
 "9cpi4jqm49l7z5z/48_wildlife_kundrat.webp",
+"k91c2lc89dnie03/59_wildlife_kundrat.webp",
+"umwef14ximfez88/56_wildlife_kundrat.webp",
+"dho558pdac19pby/58_wildlife_kundrat.webp",
+"vdgx5uzr6rww88g/57_wildlife_kundrat.webp"
 ]
 
 /*
