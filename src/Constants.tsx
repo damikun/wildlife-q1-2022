@@ -16,6 +16,8 @@ export const Images = [
 "gl22t9k2phwakp0/34_wildlife_kundrat.webp",
 "f6mp9q6xpfux8nt/35_wildlife_kundrat.webp",
 "iafpdjoj3wtz0pc/38_wildlife_kundrat.webp",
+"pe4si7lr3pii5al/60_wildlife_kundrat.webp",
+"71o60hjbdorp0yo/61_wildlife_kundrat.webp",
 "bpp9s2hj0f01f8m/36_wildlife_kundrat.webp",
 "34q4f33mv4629bo/42_wildlife_kundrat.webp",
 "3znxft5d9b3ba9s/45_wildlife_kundrat.webp",
